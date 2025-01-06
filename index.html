@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #e9ecef;
       margin: 0;
       padding: 0;
       display: flex;
@@ -28,7 +28,7 @@
     }
 
     .chat-header {
-      background-color: #4caf50;
+      background-color: #6c757d;
       color: white;
       padding: 15px;
       text-align: center;
@@ -37,12 +37,29 @@
     }
 
     .chat-body {
-      padding: 10px;
-      flex-grow: 1;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-    }
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto; /* Menambahkan scroll jika konten terlalu panjang */
+  max-height: 400px; /* Memberikan batas maksimum tinggi */
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: #6c757d #f1f1f1;
+}
+
+.chat-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: #6c757d;
+  border-radius: 10px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
 
     .chat-message {
       display: flex;
@@ -67,7 +84,7 @@
     }
 
     .message-bubble.user {
-      background-color: #d1f8d1;
+      background-color: #dfe7fd;
       color: #000;
     }
 
@@ -79,7 +96,7 @@
     .chat-footer {
       display: flex;
       padding: 10px;
-      background-color: #f9f9f9;
+      background-color: #f8f9fa;
       border-top: 1px solid #ddd;
     }
 
@@ -96,7 +113,7 @@
       margin-left: 10px;
       padding: 10px 20px;
       font-size: 14px;
-      background-color: #4caf50;
+      background-color: #6c757d;
       color: white;
       border: none;
       border-radius: 20px;
@@ -104,7 +121,7 @@
     }
 
     .chat-footer button:hover {
-      background-color: #45a049;
+      background-color: #5a6268;
     }
   </style>
 </head>
