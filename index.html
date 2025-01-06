@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot dengan Suara dan Input Teks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chat-container {
+      width: 100%;
+      max-width: 400px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .chat-body {
+      padding: 10px;
+      flex-grow: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-message {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .chat-message.user {
+      justify-content: flex-end;
+    }
+
+    .chat-message.bot {
+      justify-content: flex-start;
+    }
+
+    .message-bubble {
+      max-width: 70%;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      line-height: 1.4;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-bubble.user {
+      background-color: #d1f8d1;
+      color: #000;
+    }
+
+    .message-bubble.bot {
+      background-color: #f1f0f0;
+      color: #000;
+    }
+
+    .chat-footer {
+      display: flex;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-footer input {
+      flex-grow: 1;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      outline: none;
+    }
+
+    .chat-footer button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .chat-footer button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">Chatbot dengan Suara dan Teks</div>
+    <div class="chat-body" id="chatBody">
+      <!-- Percakapan akan ditampilkan di sini -->
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="textInput" placeholder="Ketikkan pesan di sini...">
+      <button id="sendTextBtn">Kirim</button>
+      <button id="voiceBtn">Mulai Bicara</button>
+    </div>
+  </div>
+
+  <!-- Menghubungkan dengan file JavaScript eksternal -->
+  <script src="chatbot.js"></script>
+</body>
+</html>
